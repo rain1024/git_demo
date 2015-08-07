@@ -24,7 +24,7 @@ var app = app || {
             app.animate_input();
         })
 
-        $('.input').keypress(function (e) {
+        $('#new-text').keypress(function (e) {
             if (e.which == 13) {
                 app.animate_input();
             }
