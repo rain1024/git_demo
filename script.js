@@ -4,19 +4,33 @@
 
 var app = app || {
 
+    initInterval: 0,
+
 	init: function(){
-		app.change_to("ABCDEFGH");
-		app.animate_input();
+        var message_index = 0 ;
+        var messages = ["GIT", "IS", "AWESOME"];
+
+        app.initInterval = setInterval(function(){
+            $("#new-text").val(messages[message_index]);
+            app.animate_input();
+            message_index = (message_index+1) % messages.length;
+        }, 1500);
+
+        $("#new-text").on("click", function(){
+            clearInterval(app.initInterval);
+        });
+
+        $("#change-text").on("click", function(){
+            app.animate_input();
+        })
 	},
 
 	i: 0,
 
-	animate_input: function(){
-		$("#change-text").on("click", function(){
-			app.i = 0;
-			app.change_to($("#new-text").val());
-		})
-	},
+    animate_input: function(){
+        app.i = 0;
+        app.change_to($("#new-text").val());
+    },
 
 	change_to: function(chars){
 
