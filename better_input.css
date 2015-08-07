@@ -1,0 +1,71 @@
+body .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body .form label {
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    display: inline-block;
+    float: right;
+    color: #888;
+    font-size: 18px;
+    transition: color 0.25s linear;
+}
+
+body .form input:focus ~ label {
+    color: #0080FF;
+}
+
+body .form input[type="text"] {
+    padding: 10px 0 10px;
+    width: 270px;
+    border: none;
+    border-bottom: 1px solid #666;
+    font-size: 24px;
+    transition: border-color 0.25s linear;
+}
+
+body .form input[type="text"]:focus {
+    outline: none;
+    border-color: #0080FF;
+    color: #0080FF;
+}
+
+body .form input[type="submit"] {
+    width: 120px;
+    padding: 15px;
+    margin-top: 30px;
+    border: none;
+    font-size: 18px;
+    color: #FFF;
+    background-color: #0080FF;
+    transition: background-color 0.2s ease;
+}
+
+body .form input[type="submit"]:focus {
+    outline: none;
+}
+
+body .form input[type="submit"]:hover {
+    background-color: #0066CC;
+}
+
+body .form input[type="submit"]:active {
+    animation: flash 0.2s;
+}
+
+@keyframes flash {
+    0% {
+        -webkit-box-shadow: 0px 0px 0px 0px #a8c0e6;
+        -moz-box-shadow: 0px 0px 0px 0px #a8c0e6;
+        box-shadow: 0px 0px 0px 0px #a8c0e6;
+    }
+    100% {
+        -webkit-box-shadow: 0px 0px 150px 0px #a8c0e6;
+        -moz-box-shadow: 0px 0px 150px 0px #a8c0e6;
+        box-shadow: 0px 0px 150px 0px #a8c0e6;
+    }
+}
