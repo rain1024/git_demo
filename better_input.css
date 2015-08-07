@@ -24,8 +24,9 @@ body .form input[type="text"] {
     width: 270px;
     border: none;
     border-bottom: 1px solid #666;
-    font-size: 24px;
+    font-size: 32px;
     transition: border-color 0.25s linear;
+    letter-spacing: 18px;
 }
 
 body .form input[type="text"]:focus {
